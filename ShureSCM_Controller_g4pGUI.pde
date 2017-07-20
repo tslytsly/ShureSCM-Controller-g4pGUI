@@ -1,4 +1,4 @@
-import g4p_controls.*;
+import g4p_controls.*; //<>//
 import processing.net.*;
 
 String ipAddress = "127.0.0.1";
@@ -23,10 +23,11 @@ void setup() {
   int spacing = floor(width/channels);
   buttons = new Button[channels];
   for (int i=1; i <= channels; i++) {
-    buttons[i-1] = new Button(i*spacing-buttonRadius, height - 200, buttonRadius, 255, i);
+    buttons[i-1] = new Button(i*spacing-buttonRadius-buttonRadius/2, height - 200, buttonRadius, 255, i);
   }
 
   //connect to SCM
+  myClient = new Client(this, ipAddress, port);
   connectTCPClient();
 } 
 
@@ -87,10 +88,8 @@ void mouseReleased() {
 }
 
 void connectTCPClient() {
-  if (myClient.available() > 0) {
+  if (myClient.active() != true) {
     myClient.stop();
-    myClient = new Client(this, ipAddress, port);
-  } else {
     myClient = new Client(this, ipAddress, port);
   }
 

@@ -23,11 +23,11 @@ public void btnCh2_click1(GButton source, GEvent event) { //_CODE_:btnCh2:636520
 } //_CODE_:btnCh2:636520:
 
 public void btnCh4_click1(GButton source, GEvent event) { //_CODE_:btnCh4:902719:
-  myClient.write("< SET 3 AUDIO_MUTE TOGGLE >");
+  myClient.write("< SET 4 AUDIO_MUTE TOGGLE >");
 } //_CODE_:btnCh4:902719:
 
 public void btnCh3_click1(GButton source, GEvent event) { //_CODE_:btnCh3:950368:
-  myClient.write("< SET 4 AUDIO_MUTE TOGGLE >");
+  myClient.write("< SET 3 AUDIO_MUTE TOGGLE >");
 } //_CODE_:btnCh3:950368:
 
 public void btnReset_click1(GButton source, GEvent event) { //_CODE_:btnReset:467145:
