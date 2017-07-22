@@ -8,6 +8,7 @@ int channels = 4; // num channels on mixer
 int buttonRadius = 100;
 
 boolean connected = false;
+boolean globalMute = false;
 
 
 Button[] buttons;
